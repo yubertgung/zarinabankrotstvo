@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Зарина Георгиевна — юрист по банкротству</title>
+<meta name="description" content="Списание долгов через процедуру банкротства для физических лиц, ИП и ООО. 9 лет опыта работы в системе МВД.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1E3A8A; --navy-dark:#172B66; --navy-ink:#0F1F4D;
+  --gold:#C9A96A; --gold-dark:#B4924F; --beige:#F4EEE2;
+  --bg:#FFFFFF; --grey:#F3F5F8; --line:#E2E6EE;
+  --text:#1B2338; --muted:#5B6579;
+  --radius:14px; --wrap:1160px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px;overflow-x:clip}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{overflow-x:clip;font-family:'Inter','Roboto',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6;-webkit-text-size-adjust:100%}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+h1,h2,h3{line-height:1.2;color:var(--navy-ink);letter-spacing:-.02em}
+h2{font-size:clamp(1.7rem,3.4vw,2.4rem);font-weight:700;margin-bottom:12px}
+.lead{color:var(--muted);max-width:620px;margin-bottom:44px;font-size:1.05rem}
+
+/* Шапка */
+header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:72px}
+.logo{font-weight:700;color:var(--navy-ink);font-size:1.05rem;white-space:nowrap}
+.logo span{color:var(--gold-dark);font-weight:500;margin:0 8px}
+.logo em{font-style:normal;font-weight:500;color:var(--muted)}
+nav{display:flex;gap:30px}
+nav a{font-weight:500;font-size:.95rem;color:var(--text);padding:6px 0;border-bottom:2px solid transparent;transition:border-color .2s,color .2s}
+nav a:hover{color:var(--navy);border-color:var(--gold)}
+
+/* Кнопки */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:inherit;font-weight:600;font-size:1rem;padding:16px 30px;border-radius:10px;border:0;cursor:pointer;transition:background .2s,transform .2s,box-shadow .2s}
+.btn-gold{background:var(--gold);color:var(--navy-ink);box-shadow:0 8px 20px rgba(201,169,106,.35)}
+.btn-gold:hover{background:var(--gold-dark);transform:translateY(-1px)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy-dark)}
+.btn-line{background:#fff;color:var(--navy);border:1.5px solid var(--navy)}
+.btn-line:hover{background:var(--navy);color:#fff}
+
+/* Главный экран */
+.hero{overflow:hidden;padding:72px 0 96px;background:linear-gradient(180deg,#fff 0%,var(--grey) 100%)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center}
+.hero h1{font-size:clamp(2.1rem,5vw,3.6rem);font-weight:800;margin-bottom:22px}
+.hero p{font-size:1.15rem;color:var(--muted);max-width:540px;margin-bottom:34px}
+.hero p strong{color:var(--navy);font-weight:600}
+.hero p.geo{display:flex;gap:12px;align-items:flex-start;font-size:1rem;color:var(--text);background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:10px;padding:14px 18px;max-width:540px}
+.geo svg{flex:none;width:22px;height:22px;margin-top:2px;stroke:var(--navy);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.photo{max-width:420px;margin-left:auto;width:100%;padding:12px;background:#fff;border:2px solid var(--gold);border-radius:calc(var(--radius) + 10px)}
+.photo-box{position:relative;aspect-ratio:4/5;border-radius:var(--radius);background:linear-gradient(160deg,#E9EDF6,#D5DCEC);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;color:var(--navy);overflow:hidden}
+.photo-box img{width:100%;height:100%;object-fit:cover;object-position:50% 28%;display:block}
+
+/* Почему я */
+.why{background:var(--bg)}
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px 28px}
+.why .card{border-top:3px solid var(--gold)}
+.ico{width:52px;height:52px;border-radius:12px;background:var(--navy);display:grid;place-items:center;margin-bottom:22px}
+.ico svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:1.2rem;margin-bottom:10px;font-weight:700}
+.card p{color:var(--muted);font-size:.98rem}
+.big{font-size:2.4rem;font-weight:800;color:var(--navy);line-height:1;margin-bottom:6px}
+
+/* Услуги */
+.services{background:var(--grey)}
+.cards4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.service{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px;transition:border-color .2s,box-shadow .2s}
+.service:hover{border-color:var(--gold);box-shadow:0 14px 30px rgba(30,58,138,.08)}
+.service h3{font-size:1.1rem;margin:4px 0 10px;font-weight:700}
+.service p{color:var(--muted);font-size:.95rem;flex:1}
+.service.feature{background:var(--navy);border-color:var(--navy)}
+.service.feature h3{color:#fff}
+.service.feature p{color:#C9D3EE}
+.service.feature .ico{background:var(--gold)}
+.service.feature .ico svg{stroke:var(--navy-ink)}
+.service .ico{width:46px;height:46px;margin-bottom:18px}
+
+/* Как я работаю */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s;position:relative}
+.step{position:relative;padding:0 24px 0 0}
+.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:#fff;border:2px solid var(--gold);color:var(--navy);font-weight:700;margin-bottom:20px;position:relative;z-index:1}
+.step::after{content:"";position:absolute;top:23px;left:48px;right:0;height:2px;background:var(--line)}
+.step:last-child::after{display:none}
+.step h3{font-size:1.1rem;margin-bottom:8px;font-weight:700}
+.step p{color:var(--muted);font-size:.95rem}
+
+/* Отзывы */
+.reviews{background:var(--beige)}
+.reviews .card{border:0;display:flex;flex-direction:column;gap:18px}
+.stars{color:var(--gold-dark);letter-spacing:3px;font-size:1.05rem}
+.card blockquote{font-size:1rem;color:var(--text);flex:1}
+.who{display:flex;align-items:center;gap:12px;font-size:.92rem}
+.avatar{width:42px;height:42px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:600}
+.who b{display:block;color:var(--navy-ink)}
+.who span{color:var(--muted)}
+
+/* Контакты */
+.contact{background:var(--navy);color:#fff}
+.contact h2{color:#fff}
+.contact .lead{color:#C9D3EE}
+.contact-actions{display:flex;flex-wrap:wrap;gap:16px}
+.contact .btn-wa{background:#fff;color:var(--navy-ink)}
+.contact .btn-wa:hover{background:var(--beige)}
+
+/* Футер */
+footer{background:var(--navy-ink);color:#B7C2E0;padding:48px 0 36px;font-size:.92rem}
+.foot{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:36px}
+footer h4{color:#fff;font-size:1rem;margin-bottom:12px;font-weight:600}
+footer p,footer a{display:block;margin-bottom:6px}
+footer a:hover{color:var(--gold)}
+.copy{border-top:1px solid rgba(255,255,255,.14);margin-top:32px;padding-top:20px;font-size:.82rem;color:#8E9BC0}
+
+/* Адаптив */
+@media (max-width:1020px){
+  .cards4{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr);row-gap:40px}
+  .step:nth-child(2)::after{display:none}
+}
+@media (max-width:860px){
+  section{padding:64px 0}
+  .hero{padding:44px 0 64px}
+  .hero-grid{grid-template-columns:1fr;gap:44px}
+  .photo{margin:0;max-width:100%}
+  .cards3{grid-template-columns:1fr}
+  .foot{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .wrap{padding:0 18px}
+  .bar{flex-direction:column;align-items:flex-start;gap:4px;padding-top:12px;padding-bottom:12px}
+  .logo{font-size:.95rem;white-space:normal}
+  .logo span{display:none}
+  .logo em{display:block;font-size:.85rem}
+  nav{gap:22px}
+  nav a{font-size:.9rem}
+  html{scroll-padding-top:110px}
+  .hero .btn,.contact-actions .btn{width:100%}
+  .cards4{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr;row-gap:0}
+  .step{padding:0 0 32px 70px}
+  .step::before{position:absolute;left:0;top:0;margin:0}
+  .step::after{display:block!important;top:48px;bottom:0;left:23px;right:auto;width:2px;height:auto}
+  .step:last-child{padding-bottom:0}
+  .step:last-child::after{display:none!important}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a href="#top" class="logo">Зарина Георгиевна<span>|</span><em>Юрист по банкротству</em></a>
+    <nav aria-label="Основное меню">
+      <a href="#services">Услуги</a>
+      <a href="#about">Обо мне</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Списание долгов через процедуру банкротства</h1>
+        <p>Помогаю физическим лицам, ИП и ООО законно избавиться от долгов. <strong>9 лет опыта работы в системе МВД.</strong></p>
+        <p class="geo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 005 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Работаю онлайн по всей России. По Москве и Московской области возможна личная встреча</span></p>
+        <a href="#contacts" class="btn btn-gold">Получить консультацию</a>
+      </div>
+      <div class="photo">
+        <div class="photo-box">
+          <img src="images/zarina.jpg" alt="Зарина Георгиевна — юрист по банкротству" width="900" height="1350">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why" id="about">
+    <div class="wrap">
+      <h2>Почему я</h2>
+      <p class="lead">Банкротство — это закон, а не лазейка. Я веду дела так, чтобы вы понимали каждый шаг и каждый платёж.</p>
+      <div class="cards3">
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>9 лет практики по банкротству</h3>
+          <p>Веду дела по банкротству физлиц, ИП и ООО. Большой опыт работы в МВД помогает мне видеть процедуру изнутри: грамотно готовить документы и выстраивать работу с приставами, судами и управляющими.</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 12s3.5-7 9-7 9 7 9 7-3.5 7-9 7-9-7-9-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <h3>Честность и прозрачность</h3>
+          <p>Сразу говорю, подходит ли вам банкротство. Стоимость и этапы фиксируются в договоре — без скрытых платежей.</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3v18M5 7h14M5 7l-2.5 7a3 3 0 005 0zM19 7l-2.5 7a3 3 0 005 0zM8 21h8"/></svg></div>
+          <h3>Работа строго по закону</h3>
+          <p>Действую в рамках 127-ФЗ. Никаких серых схем, которые могут обернуться отказом суда или рисками для вас.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="wrap">
+      <h2>Услуги</h2>
+      <p class="lead">Подберу процедуру под вашу ситуацию — для частного лица или для бизнеса.</p>
+      <div class="cards4">
+        <article class="service">
+          <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></div>
+          <h3>Банкротство физлиц</h3>
+          <p>Списание кредитов, займов и других долгов гражданина через суд.</p>
+        </article>
+        <article class="service">
+          <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2M3 13h18"/></svg></div>
+          <h3>Банкротство ИП</h3>
+          <p>Закрытие долговых обязательств индивидуального предпринимателя.</p>
+        </article>
+        <article class="service">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 21V5a1 1 0 011-1h9a1 1 0 011 1v16M15 9h4a1 1 0 011 1v11M3 21h18M8 8h3M8 12h3M8 16h3"/></svg></div>
+          <h3>Банкротство ООО</h3>
+          <p>Ликвидация компании с долгами и защита от субсидиарной ответственности.</p>
+        </article>
+        <article class="service feature">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/><path d="M4 20h16"/></svg></div>
+          <h3>Сопровождение под ключ</h3>
+          <p>Беру на себя все этапы: от анализа до решения суда о списании долгов.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="how">
+    <div class="wrap">
+      <h2>Как я работаю</h2>
+      <p class="lead">Четыре понятных этапа. На каждом вы знаете, что происходит и что дальше.</p>
+      <div class="steps">
+        <div class="step"><h3>Консультация</h3><p>Выслушиваю ситуацию и объясняю, какие у вас есть варианты.</p></div>
+        <div class="step"><h3>Анализ ситуации</h3><p>Изучаю долги, имущество и доходы, оцениваю перспективы дела.</p></div>
+        <div class="step"><h3>Сбор документов</h3><p>Готовлю заявление и весь пакет документов для суда.</p></div>
+        <div class="step"><h3>Суд</h3><p>Представляю ваши интересы до решения о списании долгов.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <div class="wrap">
+      <h2>Отзывы</h2>
+      <p class="lead">Что говорят клиенты, которые прошли процедуру.</p>
+      <div class="cards3">
+        <article class="card">
+          <div class="stars" aria-label="5 из 5">★★★★★</div>
+          <blockquote>«Долго боялась начинать — казалось, что это стыдно и сложно. Зарина Георгиевна всё разложила по шагам, и я знала, что будет дальше. Суд списал долги, дышать стало легче».</blockquote>
+          <div class="who"><div class="avatar">Е</div><div><b>Елена М.</b><span>банкротство физлица</span></div></div>
+        </article>
+        <article class="card">
+          <div class="stars" aria-label="5 из 5">★★★★★</div>
+          <blockquote>«Закрывали ИП после неудачного года. Понравилось, что с самого начала назвали полную стоимость и честно сказали о рисках. Сроки соблюдены, документы всегда были в порядке».</blockquote>
+          <div class="who"><div class="avatar">А</div><div><b>Андрей К.</b><span>банкротство ИП</span></div></div>
+        </article>
+        <article class="card">
+          <div class="stars" aria-label="5 из 5">★★★★★</div>
+          <blockquote>«Обращались по поводу ООО с долгами перед поставщиками. Грамотно выстроили позицию в суде, всегда были на связи и отвечали на вопросы в тот же день».</blockquote>
+          <div class="who"><div class="avatar">С</div><div><b>Сергей Л.</b><span>банкротство ООО</span></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contacts">
+    <div class="wrap">
+      <h2>Получить консультацию</h2>
+      <p class="lead">Напишите в удобный мессенджер — коротко опишите ситуацию, и я отвечу в ближайшее время.</p>
+      <div class="contact-actions">
+        <a class="btn btn-wa" href="https://wa.me/79264642007" target="_blank" rel="noopener">Написать в WhatsApp</a>
+        <a class="btn btn-gold" href="https://t.me/Za11_05" target="_blank" rel="noopener">Написать в Telegram</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <h4>Зарина Георгиевна</h4>
+        <p>Юрист по банкротству физических лиц, ИП и ООО.</p>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <a href="https://wa.me/79264642007" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://t.me/Za11_05" target="_blank" rel="noopener">Telegram</a>
+      </div>
+      <div>
+        <h4>Реквизиты</h4>
+        <p>ИНН: 971509710808</p>
+        <a href="offer.html" >Публичная оферта</a>
+        <a href="privacy.html">Политика конфиденциальности</a>
+      </div>
+    </div>
+    <div class="copy">© 2026 Зарина Георгиевна. Информация на сайте не является публичной офертой и не гарантирует результат по конкретному делу.</div>
+  </div>
+</footer>
+
+</body>
+</html>
